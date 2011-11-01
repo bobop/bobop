@@ -8,6 +8,9 @@ gem 'rails', '3.1.1'
 gem 'pg'
 gem 'haml'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'twitter'
+gem 'twitter-text', :git => 'git://github.com/twitter/twitter-text-rb.git', :branch => 'ruby_192_compat'
 
 
 # Gems used only for assets and not required

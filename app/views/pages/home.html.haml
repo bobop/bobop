@@ -1,0 +1,50 @@
+.hero-unit
+  %h1 Hello, I'm Ben
+  %h2 I am a Freelance Ruby on Rails developer based in Manchester
+  = link_to "Available for hire", contact_path, :class => "btn danger large" 
+.row
+  .span2
+    ben@bobop.co.uk
+  .span2
+    @bobop
+  .span2
+    Facebook
+  .span2
+    Google+
+  .span2
+    WWR
+  .span2
+    Github
+  .span2
+    LinkedIn
+  .span2
+    GeekList
+.row
+  .span6
+    %h3 Clients
+    %h4 
+      Theatre Digs Booker
+      %small 1 project
+    %h4 
+      Monochrome
+      %small 4 projects
+    %h4 
+      Fudge
+      %small 2 projects
+    %p= link_to "See all my Clients »", root_path, :class => "btn"
+  .span6
+    %h3 Projects
+    %h4 
+      Hovis
+      %small for Monochrome
+    %h4 
+      Bank of America
+      %small for Fudge
+    %h4 
+      Collabor8online
+      %small for Collabor8online
+    %p= link_to "See all my Projects »", root_path, :class => "btn"
+  .span4
+    %h3 Twitter Feed
+    - @tweets.each do |t|
+      %p=raw auto_link(t.text, :target => "_blank")

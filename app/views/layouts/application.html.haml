@@ -1,0 +1,20 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
+%head
+  %title Bobop - Freelance Ruby on Rails developer based in Manchester
+  = stylesheet_link_tag    "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+%body
+  .container
+    .row
+      .span6
+        = link_to image_tag("bobop_logo.jpg"), root_path
+    = yield
+    %footer
+      %p
+        = link_to image_tag("http://i.creativecommons.org/l/by-sa/3.0/88x31.png"), "http://creativecommons.org/licenses/by-sa/3.0"
+      %p
+        = Time.now.strftime("%Y")
+        -
+        Bobop

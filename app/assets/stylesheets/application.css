@@ -1,7 +1,22 @@
 /*
+ *= require twitter/bootstrap
+*/
+/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree . 
 */
+
+.hero-unit {
+	background: #9FDAD4;
+	margin-bottom: 10px;
+}
+.hero-unit h1, .hero-unit h2 {
+	color: #fff;
+	font-weight: 200;
+}
+footer {
+	text-align: center;
+}

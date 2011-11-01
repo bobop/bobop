@@ -1,9 +1,9 @@
 Bobop::Application.routes.draw do
   get "pages/home"
 
-  get "pages/about"
+  get "pages/about", :as => :about
 
-  get "pages/contact"
+  get "pages/contact", :as => :contact
   
   root :to => 'pages#home'
 
