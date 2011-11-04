@@ -2,9 +2,6 @@
   .span16.content
     .row
       .span10
-        - if notice
-          .alert-message.success
-            %p#notice= notice
         
         %h1= @client.name
         %h2= link_to @client.website, @client.website

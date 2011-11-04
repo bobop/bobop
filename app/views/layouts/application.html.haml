@@ -8,8 +8,19 @@
 %body
   .container
     .row
-      .span6
+      .span16
+        = link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout" if current_user
         = link_to image_tag("bobop_logo.jpg"), root_path
+    - if notice
+      .row
+        .span16
+          .alert-message.success
+            %p#notice= notice
+    - if alert
+      .row
+        .span16
+          .alert-message.error
+            %p#alert= alert
     = yield
     %footer
       %p

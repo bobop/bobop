@@ -1,4 +1,4 @@
-%h1 Listing clients
+%h1 Listing Clients
 
 %table
   %tr
@@ -15,7 +15,7 @@
       %td= client.name
       %td= client.website
       %td= image_tag client.logo.url(:thumb)
-      %td= client.description
+      %td= client.description[0..200]
       %td= link_to 'Show', client
       %td= link_to 'Edit', edit_client_path(client)
       %td= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete
