@@ -41,5 +41,8 @@
   .span4.list_box
     .list_content
       %h3 Twitter Feed
-      - @tweets.each do |t|
-        %p=raw auto_link(t.text, :target => "_blank")
+      - unless Twitter.rate_limit_status.remaining_hits == 0
+        - @tweets.each do |t|
+          %p=raw auto_link(t.text, :target => "_blank")
+      - else
+        Oops, hit my API limit!
