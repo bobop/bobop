@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  website: MyString
+  logo_file_name: MyString
+  logo_content_type: MyString
+  logo_file_size: 1
+  logo_updated_at: 2011-11-04 20:28:36
+  description: MyText
+
+two:
+  name: MyString
+  website: MyString
+  logo_file_name: MyString
+  logo_content_type: MyString
+  logo_file_size: 1
+  logo_updated_at: 2011-11-04 20:28:36
+  description: MyText

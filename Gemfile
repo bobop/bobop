@@ -11,7 +11,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'twitter'
 gem 'twitter-text', :git => 'git://github.com/twitter/twitter-text-rb.git', :branch => 'ruby_192_compat'
-
+gem 'paperclip', '~> 2.4'
+gem 'haml-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @client.name
+%p
+  %b Website:
+  = @client.website
+%p
+  %b Logo file name:
+  = @client.logo_file_name
+%p
+  %b Logo content type:
+  = @client.logo_content_type
+%p
+  %b Logo file size:
+  = @client.logo_file_size
+%p
+  %b Logo updated at:
+  = @client.logo_updated_at
+%p
+  %b Description:
+  = @client.description
+
+= link_to 'Edit', edit_client_path(@client)
+\|
+= link_to 'Back', clients_path
