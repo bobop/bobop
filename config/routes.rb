@@ -1,4 +1,6 @@
 Bobop::Application.routes.draw do
+  resources :projects
+
   resources :clients
 
   get "pages/home"

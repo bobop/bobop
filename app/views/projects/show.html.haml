@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Client:
+  = @project.client_id
+%p
+  %b Name:
+  = @project.name
+%p
+  %b Website:
+  = @project.website
+%p
+  %b Logo file name:
+  = @project.logo_file_name
+%p
+  %b Logo content type:
+  = @project.logo_content_type
+%p
+  %b Logo file size:
+  = @project.logo_file_size
+%p
+  %b Logo updated at:
+  = @project.logo_updated_at
+%p
+  %b Screenshot file name:
+  = @project.screenshot_file_name
+%p
+  %b Screenshot content type:
+  = @project.screenshot_content_type
+%p
+  %b Screenshot file size:
+  = @project.screenshot_file_size
+%p
+  %b Screenshot updated at:
+  = @project.screenshot_updated_at
+%p
+  %b Description:
+  = @project.description
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path
