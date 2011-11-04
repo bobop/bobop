@@ -1,27 +1,21 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @client.name
-%p
-  %b Website:
-  = @client.website
-%p
-  %b Logo file name:
-  = @client.logo_file_name
-%p
-  %b Logo content type:
-  = @client.logo_content_type
-%p
-  %b Logo file size:
-  = @client.logo_file_size
-%p
-  %b Logo updated at:
-  = @client.logo_updated_at
-%p
-  %b Description:
-  = @client.description
-
-= link_to 'Edit', edit_client_path(@client)
-\|
-= link_to 'Back', clients_path
+.row
+  .span16.content
+    .row
+      .span10
+        - if notice
+          .alert-message.success
+            %p#notice= notice
+        
+        %h1= @client.name
+        %h2= link_to @client.website, @client.website
+        %p=raw @client.description
+      .span6
+        .show_logo
+          = image_tag @client.logo.url(:medium)
+        .list_box
+          .list_content
+            %h2 Projects
+            - @client.projects.each do |p|
+              .logo
+                = link_to image_tag(p.logo.url(:thumb)), project_path(p)
+              %h3= link_to p.name, project_path(p)

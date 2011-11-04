@@ -9,14 +9,65 @@
  *= require_tree . 
 */
 
-.hero-unit {
+.highlight {
 	background: #9FDAD4;
 	margin-bottom: 10px;
+	padding: 60px 0;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
-.hero-unit h1, .hero-unit h2 {
+.highlight h1, .highlight h2 {
 	color: #fff;
 	font-weight: 200;
 }
+.highlight h1 {
+	margin-bottom: 0;
+	font-size: 60px;
+	line-height: 1;
+	letter-spacing: -1px;
+}
+.highlight h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.social {
+	margin-top: 10px;
+	color: #fff;
+}
+
+.list_box {
+	background-color: #CFEDEA;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.list_content {
+	padding: 10px 20px;
+}
+.span6 .list_content {
+	width: 300px;
+}
+.span4 .list_content {
+	width: 180px;
+}
+.logo {
+	float: right;
+	padding: 5px 0 5px 5px;
+}
+
+.content {
+	border-top: 1px solid #CFEDEA;
+}
+.alert-message {
+	margin-top: 10px;
+}
+.show_logo {
+	margin-top: 20px;
+	text-align: right;
+}
+
 footer {
 	text-align: center;
 }

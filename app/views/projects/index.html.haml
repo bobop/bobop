@@ -5,14 +5,8 @@
     %th Client
     %th Name
     %th Website
-    %th Logo file name
-    %th Logo content type
-    %th Logo file size
-    %th Logo updated at
-    %th Screenshot file name
-    %th Screenshot content type
-    %th Screenshot file size
-    %th Screenshot updated at
+    %th Logo
+    %th Screenshot
     %th Description
     %th
     %th
@@ -23,15 +17,9 @@
       %td= project.client_id
       %td= project.name
       %td= project.website
-      %td= project.logo_file_name
-      %td= project.logo_content_type
-      %td= project.logo_file_size
-      %td= project.logo_updated_at
-      %td= project.screenshot_file_name
-      %td= project.screenshot_content_type
-      %td= project.screenshot_file_size
-      %td= project.screenshot_updated_at
-      %td= project.description
+      %td= image_tag project.logo(:thumb)
+      %td= image_tag project.screenshot(:thumb)
+      %td= project.description[0..200]
       %td= link_to 'Show', project
       %td= link_to 'Edit', edit_project_path(project)
       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete

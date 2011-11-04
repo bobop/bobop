@@ -1,42 +1,16 @@
-%p#notice= notice
-
-%p
-  %b Client:
-  = @project.client_id
-%p
-  %b Name:
-  = @project.name
-%p
-  %b Website:
-  = @project.website
-%p
-  %b Logo file name:
-  = @project.logo_file_name
-%p
-  %b Logo content type:
-  = @project.logo_content_type
-%p
-  %b Logo file size:
-  = @project.logo_file_size
-%p
-  %b Logo updated at:
-  = @project.logo_updated_at
-%p
-  %b Screenshot file name:
-  = @project.screenshot_file_name
-%p
-  %b Screenshot content type:
-  = @project.screenshot_content_type
-%p
-  %b Screenshot file size:
-  = @project.screenshot_file_size
-%p
-  %b Screenshot updated at:
-  = @project.screenshot_updated_at
-%p
-  %b Description:
-  = @project.description
-
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
+.row
+  .span16.content
+    .row
+      .span10
+        - if notice
+          .alert-message.success
+            %p#notice= notice
+        
+        %h1
+          = @project.name
+          %small= "for #{@project.client.name}"
+        %h2= link_to @project.website, @project.website
+        = image_tag @project.screenshot.url(:medium)
+        %p=raw @project.description
+      .span6.show_logo
+        = image_tag @project.logo.url(:medium)

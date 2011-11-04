@@ -4,10 +4,7 @@
   %tr
     %th Name
     %th Website
-    %th Logo file name
-    %th Logo content type
-    %th Logo file size
-    %th Logo updated at
+    %th Logo
     %th Description
     %th
     %th
@@ -17,10 +14,7 @@
     %tr
       %td= client.name
       %td= client.website
-      %td= client.logo_file_name
-      %td= client.logo_content_type
-      %td= client.logo_file_size
-      %td= client.logo_updated_at
+      %td= image_tag client.logo.url(:thumb)
       %td= client.description
       %td= link_to 'Show', client
       %td= link_to 'Edit', edit_client_path(client)
