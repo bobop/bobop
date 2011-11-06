@@ -52,10 +52,14 @@
 .span4 .list_content {
 	width: 180px;
 }
-.project, .client {
+.item {
 	float: left;
 	width: 300px;
 	min-height: 50px;
+	margin-bottom: 10px;
+}
+.item h4 {
+	line-height: 20px;
 }
 .logo {
 	float: right;
@@ -64,7 +68,6 @@
 .small {
 	font-size: 12px;
 	color: #999;
-	margin-top: -10px;
 }
 
 .logout {

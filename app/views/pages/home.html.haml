@@ -22,7 +22,7 @@
     .list_content
       %h3 Clients
       - @clients.each do |c|
-        .client
+        .item
           .logo
             = link_to image_tag(c.logo.url(:thumb)), client_path(c)
           %h4 
@@ -33,9 +33,9 @@
     .list_content
       %h3 Projects
       - @projects.each do |p|
-        .project
+        .item
           .logo
-            = link_to image_tag(p.logo.url(:thumb)), project_path(p)
+            = link_to image_tag(p.logo.url(:thumb)), project_path(p) if p.logo.present?
           %h4 
             = link_to p.name, project_path(p)
           .small= p.client ? "for #{p.client.name}" : "a Bobop original"
