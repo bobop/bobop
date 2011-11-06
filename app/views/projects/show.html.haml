@@ -6,7 +6,8 @@
         
         %h1
           = @project.name
-          %small= "for #{@project.client.name}"
+          %small= @project.client ? "for #{@project.client.name}" : "a Bobop original"
+          
         %h2= link_to @project.website, @project.website
         = image_tag @project.screenshot.url(:medium)
         %p=raw @project.description

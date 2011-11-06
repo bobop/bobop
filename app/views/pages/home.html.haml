@@ -22,21 +22,23 @@
     .list_content
       %h3 Clients
       - @clients.each do |c|
-        .logo
-          = link_to image_tag(c.logo.url(:thumb)), client_path(c)
-        %h4 
-          = link_to c.name, client_path(c)
-          %small= pluralize(c.projects.size, 'project')
+        .client
+          .logo
+            = link_to image_tag(c.logo.url(:thumb)), client_path(c)
+          %h4 
+            = link_to c.name, client_path(c)
+          .small= pluralize(c.projects.size, 'project')
       %p= link_to "See all my Clients »", root_path, :class => "btn"
   .span6.list_box
     .list_content
       %h3 Projects
       - @projects.each do |p|
-        .logo
-          = link_to image_tag(p.logo.url(:thumb)), project_path(p)
-        %h4 
-          = link_to p.name, project_path(p)
-          %small= "for #{p.client.name}"
+        .project
+          .logo
+            = link_to image_tag(p.logo.url(:thumb)), project_path(p)
+          %h4 
+            = link_to p.name, project_path(p)
+          .small= p.client ? "for #{p.client.name}" : "a Bobop original"
       %p= link_to "See all my Projects »", root_path, :class => "btn"
   .span4.list_box
     .list_content
