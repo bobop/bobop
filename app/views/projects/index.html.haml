@@ -1,17 +1,19 @@
 .row
   .span16.content
+    %h1 Projects
+    %p I have worked on many varied Ruby on Rails projects over the last 5 years.
+    %p Here are some of my latest projects:
     %p= link_to 'New Project', new_project_path if current_user
     - @projects.each do |project|
       .row
-        .span10
-          %h1
+        .span16.content
+          .f_right
+            = image_tag project.logo.url(:thumb)
+          %h2
             = project.name
             %small= project.client ? "for #{project.client.name}" : "a Bobop original"
             
-          %h2= link_to project.website, project.website
-          = image_tag project.screenshot.url(:medium)
-          %p=raw project.description
+          %h3= link_to project.website, project.website
+          %p= link_to "More Details »", project_path(project), :class => "btn"
           %p= link_to 'Edit', edit_project_path(project) if current_user
           %p= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete if current_user
-        .span6.show_logo
-          = image_tag project.logo.url(:medium)
