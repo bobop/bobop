@@ -8,7 +8,7 @@
       .row
         .span16.content
           .f_right
-            = image_tag client.logo.url(:thumb)
+            = image_tag client.logo.url(:medium)
           %h2= client.name
           %h3= link_to client.website, client.website
           %p= link_to "More Details »", client_path(client), :class => "btn"

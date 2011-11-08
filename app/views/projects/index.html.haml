@@ -8,7 +8,7 @@
       .row
         .span16.content
           .f_right
-            = image_tag project.logo.url(:thumb)
+            = image_tag project.logo.url(:medium)
           %h2
             = project.name
             %small= project.client ? "for #{project.client.name}" : "a Bobop original"

@@ -154,6 +154,9 @@ a.link:hover {
 	float: right;
 	text-align: right;
 }
+.bobop_logo {
+	margin-bottom: 0;
+}
 
 footer {
 	text-align: center;
