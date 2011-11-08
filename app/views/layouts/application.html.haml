@@ -1,31 +1,46 @@
 !!!
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
-%head
-  %title Bobop - Freelance Ruby on Rails developer based in Manchester
-  = stylesheet_link_tag    "application"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
-%body
-  .container
-    .row
-      .span16
-        = link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout" if current_user
-        = link_to image_tag("bobop_logo.jpg"), root_path
-    - if notice
+  %head
+    %title Bobop - Freelance Ruby on Rails developer based in Manchester
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
       .row
         .span16
-          .alert-message.success
-            %p#notice= notice
-    - if alert
-      .row
-        .span16
-          .alert-message.error
-            %p#alert= alert
-    = yield
-    %footer
-      %p
-        = link_to image_tag("http://i.creativecommons.org/l/by-sa/3.0/88x31.png"), "http://creativecommons.org/licenses/by-sa/3.0"
-      %p
-        = Time.now.strftime("%Y")
-        -
-        Bobop
+          = link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout" if current_user
+          = link_to image_tag("bobop_logo.jpg"), root_path
+      - if notice
+        .row
+          .span16
+            .alert-message.success
+              %p#notice= notice
+      - if alert
+        .row
+          .span16
+            .alert-message.error
+              %p#alert= alert
+      = yield
+      %footer
+        %p
+          = link_to image_tag("http://i.creativecommons.org/l/by-sa/3.0/88x31.png"), "http://creativecommons.org/licenses/by-sa/3.0"
+        %p
+          = Time.now.strftime("%Y")
+          -
+          Bobop
+:javascript
+  $(document).ready( function() {
+      getTweets();
+  });
+  
+  function getTweets() {
+     getTwitters('tweets', { 
+        id: 'bobop', 
+        count: 3, 
+        enableLinks: true, 
+        ignoreReplies: true, 
+        clearContents: true,
+        template: '<p>%text%</p><span class="twittermeta time">%time%</span>'
+      });
+  }

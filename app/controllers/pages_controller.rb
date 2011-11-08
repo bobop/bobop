@@ -1,11 +1,8 @@
 class PagesController < ApplicationController
   
   def home
-    unless Twitter.rate_limit_status.remaining_hits == 0
-      @tweets = Twitter.user_timeline("bobop", :count => 3)
-    end
-    @clients = Client.all
-    @projects = Project.all
+    @clients = Client.limit(5).all
+    @projects = Project.limit(5).all
   end
 
   def about

@@ -1,0 +1,29 @@
+.row
+  .span16.content
+    .row
+      .span12
+        %h1 Contact Me
+        %p I am available to hire so contact me through the details below to discuss your project:
+        .row
+          .span3.keys
+            %h2 Phone: 
+            %h2 Email:
+            %h2 Address:
+          .span7.values
+            %h2 07811197374
+            %h2= link_to "ben@bobop.co.uk", "mailto:ben@bobop.co.uk"
+            %h2
+              Unit 17, Enterprise House
+              %br
+              Manchester Science Park
+              %br
+              Lloyd Street North
+              %br
+              M15 6SE
+      .span4.list_box
+        .list_content
+          %h3 Twitter Feed
+          #tweets
+          = link_to "Follow @bobop", "https://twitter.com/bobop", :class => "twitter-follow-button"
+          %script{:type => "text/javascript", :src => "//platform.twitter.com/widgets.js"}
+ 

@@ -4,19 +4,13 @@
       %h1 Hello, I'm Ben
       %h2 I am a Freelance Ruby on Rails developer based in Manchester
       = link_to "Available for hire", contact_path, :class => "btn danger large" 
-    .span3
       .social
-        @bobop
-      .social
-        Github
-      .social
-        LinkedIn
-      .social
-        Facebook
-      .social
-        Google+
-      .social
-        ben@bobop.co.uk
+        = link_to image_tag("twitter_newbird_white.png"), "http://twitter.com/bobop"
+        = link_to image_tag("github.png"), "http://github.com/bobop"
+        = link_to image_tag("linkedinlogo.png"), "http://uk.linkedin.com/in/benjgibbs"
+        = link_to image_tag("facebook.png"), "http://facebook.com/bobop"
+        = link_to image_tag("googleplus.png"), "https://plus.google.com/111410012808185125992/posts"
+        = link_to "ben@bobop.co.uk", "mailto:ben@bobop.co.uk"
 .row
   .span6.list_box
     .list_content
@@ -43,8 +37,6 @@
   .span4.list_box
     .list_content
       %h3 Twitter Feed
-      - unless Twitter.rate_limit_status.remaining_hits == 0
-        - @tweets.each do |t|
-          %p=raw auto_link(t.text, :target => "_blank")
-      - else
-        Oops, hit my API limit!
+      #tweets
+      = link_to "Follow @bobop", "https://twitter.com/bobop", :class => "twitter-follow-button"
+      %script{:type => "text/javascript", :src => "//platform.twitter.com/widgets.js"}
