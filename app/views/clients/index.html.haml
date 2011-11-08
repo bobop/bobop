@@ -1,25 +1,22 @@
-%h1 Listing Clients
-
-%table
-  %tr
-    %th Name
-    %th Website
-    %th Logo
-    %th Description
-    %th
-    %th
-    %th
-
-  - @clients.each do |client|
-    %tr
-      %td= client.name
-      %td= client.website
-      %td= image_tag client.logo.url(:thumb)
-      %td= client.description[0..200]
-      %td= link_to 'Show', client
-      %td= link_to 'Edit', edit_client_path(client)
-      %td= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Client', new_client_path
+.row
+  .span16.content
+    %p= link_to 'New Client', new_client_path if current_user
+    - @clients.each do |client|
+      .row
+        .span10
+          
+          %h1= client.name
+          %h2= link_to client.website, client.website
+          %p=raw client.description
+          %p= link_to 'Edit', edit_client_path(client) if current_user
+          %p= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete if current_user
+        .span6
+          .show_logo
+            = image_tag client.logo.url(:medium)
+          .list_box
+            .list_content
+              %h2 Projects
+              - client.projects.each do |p|
+                .logo
+                  = link_to image_tag(p.logo.url(:thumb)), project_path(p)
+                %h3= link_to p.name, project_path(p)

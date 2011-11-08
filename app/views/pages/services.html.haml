@@ -1,0 +1,25 @@
+.row
+  .span16.content
+    .row
+      .span12
+        %h1 Ruby On Rails Services
+        %h2 Agile
+        %p Developing web apps in short cycles, usually 2 weeks, means that new ideas, issues or direction can be quickly adopted during development.
+        %pIt avoids finalising a specification for the site, then having that delivered a couple of months later and finding that in the meantime:
+        %ul
+          %li your business model has been tweaked,
+          %li you’ve received feedback suggesting different features are needed,
+          %li you’ve realised that some features are not necessary,
+          %li you’ve had new ideas for the User Interface,
+          %li etc… but it’s too late.
+        %p Using Agile helps refine your product to function and look the way it needs to as your business evolves.
+        %h2 Lean
+        %p I encourage my clients to adopt Lean practices when starting a new web app. Start with the minimum viable product, then build on that according to the feedback from your users. Or you could waste time and money on features which you think are wonderful, but your user’s aren’t interested in!
+        %h2 Behaviour Driven Development (BDD)
+        %p BDD creates tests which describe how the web app should respond according to user’s actions. The tests are written so that a non-techy person can understand what the app is supposed to do, and a computer can run the tests to see if they pass or fail. Of course, they should all pass or the app is unstable!
+      .span4.list_box
+        .list_content
+          %h3 Twitter Feed
+          #tweets
+          = link_to "Follow @bobop", "https://twitter.com/bobop", :class => "twitter-follow-button"
+          %script{:type => "text/javascript", :src => "//platform.twitter.com/widgets.js"}

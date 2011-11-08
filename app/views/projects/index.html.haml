@@ -1,29 +1,17 @@
-%h1 Listing Projects
-
-%table
-  %tr
-    %th Client
-    %th Name
-    %th Website
-    %th Logo
-    %th Screenshot
-    %th Description
-    %th
-    %th
-    %th
-
-  - @projects.each do |project|
-    %tr
-      %td= project.client_id
-      %td= project.name
-      %td= project.website
-      %td= image_tag project.logo(:thumb)
-      %td= image_tag project.screenshot(:thumb)
-      %td= project.description[0..200]
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Project', new_project_path
+.row
+  .span16.content
+    %p= link_to 'New Project', new_project_path if current_user
+    - @projects.each do |project|
+      .row
+        .span10
+          %h1
+            = project.name
+            %small= project.client ? "for #{project.client.name}" : "a Bobop original"
+            
+          %h2= link_to project.website, project.website
+          = image_tag project.screenshot.url(:medium)
+          %p=raw project.description
+          %p= link_to 'Edit', edit_project_path(project) if current_user
+          %p= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete if current_user
+        .span6.show_logo
+          = image_tag project.logo.url(:medium)

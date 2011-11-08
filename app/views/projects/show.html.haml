@@ -9,7 +9,7 @@
           %small= @project.client ? "for #{@project.client.name}" : "a Bobop original"
           
         %h2= link_to @project.website, @project.website
-        = image_tag @project.screenshot.url(:medium)
+        = image_tag @project.screenshot.url(:medium), :class => "screenshot"
         %p=raw @project.description
       .span6.show_logo
         = image_tag @project.logo.url(:medium)

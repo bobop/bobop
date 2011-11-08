@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @projects = Project.limit(5).all
   end
 
-  def about
+  def services
   end
 
   def contact
