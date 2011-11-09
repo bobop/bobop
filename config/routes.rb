@@ -5,11 +5,9 @@ Bobop::Application.routes.draw do
 
   resources :clients
 
-  get "pages/home"
+  match 'services' => "pages#services", :as => :services
 
-  get "pages/services", :as => :services
-
-  get "pages/contact", :as => :contact
+  match 'contact' => "pages#contact", :as => :contact
   
   root :to => 'pages#home'
 
