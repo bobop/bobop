@@ -6,17 +6,17 @@
         - @client.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .field.clearfix
     = f.label :name
-    = f.text_field :name
-  .field
+    .input= f.text_field :name
+  .field.clearfix
     = f.label :website
-    = f.text_field :website
-  .field
+    .input= f.text_field :website
+  .field.clearfix
     = f.label :logo
-    = f.file_field :logo
-  .field
+    .input= f.file_field :logo
+  .field.clearfix
     = f.label :description
-    = f.text_area :description, :class => "span12"
+    .input= f.text_area :description, :class => "span12"
   .actions
     = f.submit 'Save'

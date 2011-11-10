@@ -12,7 +12,7 @@
 
 $(function() {
   $('textarea').tinymce({
-    theme: 'simple'
+    theme: 'advanced'
   });
   $(".twipsy_popover").twipsy({
 	placement: 'right',

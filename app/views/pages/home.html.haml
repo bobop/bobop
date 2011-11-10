@@ -29,15 +29,19 @@
             or
             = link_to "Brightbox.", "http://brightbox.co.uk"
           %p 
-            I regularly attend 
+            I'm an active member of a number of local group. I regularly attend
             = link_to "North West Ruby User Group", "http://nwrug.org"
-            and co-started Manchester's BootStrap Club, a social gathering of people to discuss building sustainable businesses and projects. I also run 
+            and co-started Manchester's BootStrap Club, a social gathering of people to discuss building sustainable businesses and projects. I run 
             = link_to "Manchester Jelly", "http://manchesterjelly.wordpress.com"
-            , Manchester's free, casual co-working event.
+            , Manchester's free, casual co-working event, I am a member of 
+            = link_to "Open Data Manchester", "http://opendatamanchester.org.uk"
+            and am the developer representative on the 
+            = link_to "DataGM", "http://datagm.org.uk"
+            Steering Committee.
     .row
       .span6.list_box
         .list_content
-          %h3 Clients
+          %h3 Latest Clients
           - @clients.each do |c|
             .item
               .logo
@@ -48,7 +52,7 @@
           %p= link_to "See all my Clients »", clients_path, :class => "btn"
       .span6.list_box
         .list_content
-          %h3 Projects
+          %h3 Latest Projects
           - @projects.each do |p|
             .item
               .logo

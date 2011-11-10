@@ -6,26 +6,26 @@
         - @project.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .field.clearfix
     = f.label :client_id
-    = f.select :client_id, Client.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }
-  .field
+    .input= f.select :client_id, Client.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }
+  .field.clearfix
     = f.label :name
-    = f.text_field :name
-  .field
+    .input= f.text_field :name
+  .field.clearfix
     = f.label :website
-    = f.text_field :website
-  .field
+    .input= f.text_field :website
+  .field.clearfix
     = f.label :logo
-    = f.file_field :logo
-  .field
+    .input= f.file_field :logo
+  .field.clearfix
     = f.label :screenshot
-    = f.file_field :screenshot
-  .field
+    .input= f.file_field :screenshot
+  .field.clearfix
     = f.label :description
-    = f.text_area :description, :class => "span12"
-  .field
+    .input= f.text_area :description, :class => "span12"
+  .field.clearfix
     = f.label :completed_at
-    = f.date_select :completed_at
+    .input= f.date_select :completed_at
   .actions
     = f.submit 'Save'
