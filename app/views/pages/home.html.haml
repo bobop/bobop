@@ -4,38 +4,59 @@
       %h1 Hello, I'm Ben
       %h2 I am a Freelance Ruby on Rails developer based in Manchester
       = link_to "Available for hire", contact_path, :class => "btn danger large" 
+    .span1.offset2
       .social
-        = link_to image_tag("twitter.png"), "http://twitter.com/bobop"
-        = link_to image_tag("github.png"), "http://github.com/bobop"
-        = link_to image_tag("linkedin.png"), "http://uk.linkedin.com/in/benjgibbs"
-        = link_to image_tag("facebook.png"), "http://facebook.com/bobop"
-        = link_to image_tag("googleplus.png"), "https://plus.google.com/111410012808185125992/posts"
-        = link_to "ben@bobop.co.uk", "mailto:ben@bobop.co.uk"
-    .span3
-      = image_tag "face_bobop_sm.gif"
+        = link_to image_tag("twitter.png"), "http://twitter.com/bobop", "data-placement" => "right", :rel => 'twipsy', :title => 'Bobop on Twitter', :class => "twipsy_popover"
+      .social
+        = link_to image_tag("github.png"), "http://github.com/bobop", "data-placement" => "right", :rel => 'twipsy', :title => 'Bobop on Github', :class => "twipsy_popover"
+      .social
+        = link_to image_tag("linkedin.png"), "http://uk.linkedin.com/in/benjgibbs", "data-placement" => "right", :rel => 'twipsy', :title => 'Bobop on LinkedIn', :class => "twipsy_popover"
+      .social
+        = link_to image_tag("facebook.png"), "http://facebook.com/bobop", "data-placement" => "right", :rel => 'twipsy', :title => 'Bobop on Facebook', :class => "twipsy_popover"
+      .social
+        = link_to image_tag("googleplus.png"), "https://plus.google.com/111410012808185125992/posts", "data-placement" => "right", :rel => 'twipsy', :title => 'Bobop on Google+', :class => "twipsy_popover"
+      .social
+        = link_to image_tag("email.png"), "mailto:ben@bobop.co.uk", "data-placement" => "right", :rel => 'twipsy', :title => 'Email Bobop', :class => "twipsy_popover"
 .row
-  .span6.list_box
-    .list_content
-      %h3 Clients
-      - @clients.each do |c|
-        .item
-          .logo
-            = link_to image_tag(c.logo.url(:thumb)), client_path(c)
-          %h4 
-            = link_to c.name, client_path(c)
-          .small= pluralize(c.projects.size, 'project')
-      %p= link_to "See all my Clients »", clients_path, :class => "btn"
-  .span6.list_box
-    .list_content
-      %h3 Projects
-      - @projects.each do |p|
-        .item
-          .logo
-            = link_to image_tag(p.logo.url(:thumb)), project_path(p) if p.logo.present?
-          %h4 
-            = link_to p.name, project_path(p)
-          .small= p.client ? "for #{p.client.name}" : "a Bobop original"
-      %p= link_to "See all my Projects »", projects_path, :class => "btn"
+  .span12
+    .row
+      .span12.list_box
+        .list_content
+          %h3 About Me
+          %p 
+            I have built a variety of live websites and web apps using Ruby and Rails over the last 5 years. I develop using an Agile process, Behaviour Driven Development and Git. Much of my work is deployed to either
+            = link_to "Heroku", "http://heroku.com"
+            or
+            = link_to "Brightbox.", "http://brightbox.co.uk"
+          %p 
+            I regularly attend 
+            = link_to "North West Ruby User Group", "http://nwrug.org"
+            and co-started Manchester's BootStrap Club, a social gathering of people to discuss building sustainable businesses and projects. I also run 
+            = link_to "Manchester Jelly", "http://manchesterjelly.wordpress.com"
+            , Manchester's free, casual co-working event.
+    .row
+      .span6.list_box
+        .list_content
+          %h3 Clients
+          - @clients.each do |c|
+            .item
+              .logo
+                = link_to image_tag(c.logo.url(:thumb)), client_path(c)
+              %h4 
+                = link_to c.name, client_path(c)
+              .small= pluralize(c.projects.size, 'project')
+          %p= link_to "See all my Clients »", clients_path, :class => "btn"
+      .span6.list_box
+        .list_content
+          %h3 Projects
+          - @projects.each do |p|
+            .item
+              .logo
+                = link_to image_tag(p.logo.url(:thumb)), project_path(p) if p.logo.present?
+              %h4 
+                = link_to p.name, project_path(p)
+              .small= p.client ? "for #{p.client.name}" : "a Bobop original"
+          %p= link_to "See all my Projects »", projects_path, :class => "btn"
   .span4.list_box
     .list_content
       %h3 Twitter Feed

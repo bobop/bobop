@@ -9,6 +9,10 @@
  *= require_tree . 
 */
 
+a {
+	color: #205379;
+}
+
 a.link {
 	background: #9FDAD4;
 	margin-top: 10px;
@@ -32,7 +36,7 @@ a.link:hover {
 
 .highlight {
 	background: #9FDAD4;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	padding: 60px 0 50px 0;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -57,15 +61,11 @@ a.link:hover {
 }
 
 .social {
-	margin-top: 15px;
-	color: #fff;
+	height: 25px;
+	text-align: left;
 }
-.social img {
-	vertical-align: middle;
-	padding: 0 3px;
-}
-.social a {
-	color: #fff;
+.twipsy.right {
+	margin-top: -5px;
 }
 
 .list_box {
@@ -76,6 +76,7 @@ a.link:hover {
 	box-shadow: 3px 3px 5px #efefef;
 	-moz-box-shadow: 3px 3px 5px #efefef;
 	-webkit-box-shadow: 3px 3px 5px #efefef;
+	margin-bottom: 20px;
 }
 .list_content {
 	padding: 10px 20px;
@@ -92,7 +93,7 @@ a.link:hover {
 	min-height: 50px;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #9FDAD4;
+	border-bottom: 1px solid #E7F6F5;
 }
 .item h4 {
 	line-height: 20px;

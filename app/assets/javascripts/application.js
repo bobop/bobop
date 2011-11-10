@@ -14,4 +14,9 @@ $(function() {
   $('textarea').tinymce({
     theme: 'simple'
   });
+  $(".twipsy_popover").twipsy({
+	placement: 'right',
+	offset: 5,
+	animate: true
+  });
 });
