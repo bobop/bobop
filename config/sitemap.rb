@@ -20,6 +20,10 @@ SitemapGenerator::Sitemap.create do
   Post.find_each do |post|
     add post_path(post), :lastmod => post.updated_at
   end
+  
+  add contact_path
+  add services_path
+  
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
