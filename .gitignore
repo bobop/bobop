@@ -5,3 +5,5 @@ tmp/
 .sass-cache/
 .DS_Store
 public/system
+public/sitemap*
+config/s3.yml

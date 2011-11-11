@@ -13,6 +13,10 @@ gem 'paperclip', '~> 2.4'
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'aws-s3'
+gem 'whenever', :require => false
+gem 'sitemap_generator'
+gem 'carrierwave'
+gem 'fog' # if you're using S3
 
 # Gems used only for assets and not required
 # in production environments by default.
