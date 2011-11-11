@@ -50,6 +50,8 @@
                 = link_to c.name, client_path(c)
               .small= pluralize(c.projects.size, 'project')
           %p= link_to "See all my Clients »", clients_path, :class => "btn"
+          %p= S3_CREDENTIALS
+          %p= @config
       .span6.list_box
         .list_content
           %h3 Latest Projects
