@@ -5,3 +5,4 @@ else
   # get credentials from YML file
   S3_CREDENTIALS = Rails.root.join("config/s3.yml")
 end
+# From http://icebergist.com/posts/paperclip-heroku-and-amazon-s3-credentials
