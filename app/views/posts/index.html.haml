@@ -11,7 +11,7 @@
           %h2
             = post.title
             %small= post.date
-          %p=raw post.content
-          %p= link_to "More Details »", post_path(post), :class => "btn"
+          %p= "#{strip_tags(post.content)[0..300]}..."
+          %p= link_to "Read More »", post_path(post), :class => "btn"
           %p= link_to 'Edit', edit_post_path(post) if current_user
           %p= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete if current_user
