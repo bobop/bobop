@@ -1,7 +1,7 @@
 !!!
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
   %head
-    %title Bobop - Freelance Ruby on Rails developer based in Manchester
+    = yield :head
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     %link{:rel => "SHORTCUT ICON", :href => "/assets/b.png"}
