@@ -9,7 +9,6 @@ class SitemapController < ApplicationController
     @projects = Project.all
 	respond_to do |format|
 	  format.xml # sitemap is a named scope
-	  format.html
 	end
   end
 end
