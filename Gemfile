@@ -13,6 +13,7 @@ gem 'paperclip', '~> 2.4'
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'aws-s3'
+gem 'htmlentities'
 
 # Gems used only for assets and not required
 # in production environments by default.

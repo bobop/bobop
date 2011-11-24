@@ -8,7 +8,7 @@
     - @posts.each do |p|
       %item
         %title= p.title
-        %description=raw p.content.gsub("&nbsp;", " ")
+        %description=raw HTMLEntities.new.decode(p.content)
         %link #{base_url}/posts/#{p.slug}
         %pubDate= p.created_at
         %author ben@bobop.co.uk
