@@ -8,7 +8,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require tinymce-jquery
-//= require jquery.remotipart
 //= require_tree .
 
 $(function() {
