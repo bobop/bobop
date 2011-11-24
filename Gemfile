@@ -14,7 +14,6 @@ gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'aws-s3'
 gem 'htmlentities'
-gem "remotipart", "~> 1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
