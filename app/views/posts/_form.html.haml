@@ -13,6 +13,14 @@
     = f.label :content
     .input= f.text_area :content, :class => "span12"
   .field.clearfix
+    = label_tag "Images"
+    .input
+      = link_to "Upload Image", new_image_path, :class => "btn"
+      .image_container
+        .images
+          - @images.each do |image|
+            = image_tag image.image.url(:medium), :title => image.title
+  .field.clearfix
     = f.label :publish
     .input= f.check_box :publish
   .field.clearfix

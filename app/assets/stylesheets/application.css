@@ -163,6 +163,13 @@ a.link:hover {
 	border: 2px solid #CFEDEA;
 	margin: 5px;
 }
+.image_container {
+	height: 330px;
+	overflow: auto;
+}
+.image_container .images {
+	width: 2000px;
+}
 
 footer {
 	text-align: center;
