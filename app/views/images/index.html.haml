@@ -1,0 +1,14 @@
+.row
+  .span16.content
+    %h1 Images
+
+    - @images.each do |image|
+      %p
+        = image_tag image.image.url(:medium), :title => image.title
+        %br
+        = link_to 'Edit', edit_image_path(image)
+        = link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Image', new_image_path

@@ -1,5 +1,7 @@
 Bobop::Application.routes.draw do
   
+  resources :images
+
   resources :posts
 
   devise_for :users
