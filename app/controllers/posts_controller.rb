@@ -28,7 +28,8 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
-    @images = Image.all
+    @image = Image.new
+    @images = Image.order("created_at DESC").all
 
     respond_to do |format|
       format.html # new.html.erb

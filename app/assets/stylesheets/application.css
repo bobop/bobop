@@ -167,7 +167,7 @@ a.link:hover {
 	height: 330px;
 	overflow: auto;
 }
-.image_container .images {
+.image_container #images {
 	width: 2000px;
 }
 
