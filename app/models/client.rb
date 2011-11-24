@@ -6,6 +6,10 @@ class Client < ActiveRecord::Base
        :path => "/:style/:id/:filename"
   
   def to_param
-    "#{id}-#{name.gsub(/[^a-z0-9]+/i, '-')}"
+    "#{slug}"
+  end
+
+  def slug
+  	"#{id}-#{name.gsub(/[^a-z0-9]+/i, '-')}"
   end
 end

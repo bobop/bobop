@@ -1,0 +1,66 @@
+- base_url = "http://#{request.host_with_port}"
+!!! XML
+%urlset{:xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9"}
+
+  -# Home page
+  %url
+    %loc #{base_url}
+    %lastmod 2011-11-11
+    %changefreq daily
+    %priority 0.5
+
+  -# Posts page
+  %url
+    %loc #{base_url}/posts
+    %lastmod 2011-11-11
+    %changefreq daily
+    %priority 0.5
+
+  - for post in @posts
+    %url
+      %loc #{base_url}/posts/#{post.slug}
+      %lastmod=post.updated_at.strftime("%Y-%m-%d")
+      %changefreq monthly
+      %priority 0.5
+
+  -# Clients page
+  %url
+    %loc #{base_url}/clients
+    %lastmod 2011-11-11
+    %changefreq monthly
+    %priority 0.5
+
+  - for client in @clients
+    %url
+      %loc #{base_url}/clients/#{client.slug}
+      %lastmod=client.updated_at.strftime("%Y-%m-%d")
+      %changefreq monthly
+      %priority 0.5
+
+  -# Projects page
+  %url
+    %loc #{base_url}/projects
+    %lastmod 2011-11-11
+    %changefreq monthly
+    %priority 0.5
+
+  - for project in @projects
+    %url
+      %loc #{base_url}/projects/#{project.slug}
+      %lastmod=project.updated_at.strftime("%Y-%m-%d")
+      %changefreq monthly
+      %priority 0.5
+
+  -# Services page
+  %url
+    %loc #{base_url}/services
+    %lastmod 2011-11-11
+    %changefreq monthly
+    %priority 0.5
+
+  -# Contact page
+  %url
+    %loc #{base_url}/contact
+    %lastmod 2011-11-11
+    %changefreq monthly
+    %priority 0.5
