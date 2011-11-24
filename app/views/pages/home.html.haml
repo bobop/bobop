@@ -60,8 +60,9 @@
               %h4 
                 = link_to p.name, project_path(p)
               .small= p.client ? "for #{p.client.name}" : "a Bobop original"
-          %p= link_to "See all my Projects »", projects_path, :class => "btn"
-          %p= link_to "See all my Clients »", clients_path, :class => "btn"
+          %p
+            = link_to "See all my Projects »", projects_path, :class => "btn"
+            = link_to "See my Clients »", clients_path, :class => "btn"
   .span4.list_box
     .list_content
       %h3 Twitter Feed
