@@ -1,0 +1,14 @@
+- base_url = "http://#{request.host_with_port}"
+!!! XML
+%rss{ :version => "2.0" }
+  %channel
+    %title Bobop - Freelance Ruby on Rails developer based in Manchester
+    %link= base_url
+    %description The blog of Bobop
+    - @posts.each do |p|
+      %item
+        %title= p.title
+        %description=raw p.content
+        %link #{base_url}/posts/#{p.slug}
+        %pubDate= p.created_at
+        %author ben@bobop.co.uk
