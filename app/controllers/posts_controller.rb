@@ -40,6 +40,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @images = Image.order("created_at DESC").all
   end
 
   # POST /posts
