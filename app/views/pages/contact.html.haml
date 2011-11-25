@@ -7,20 +7,23 @@
       .span12
         %h1 Contact Me
         %p I am available to hire so contact me through the details below to discuss your project:
-        .row
+        .row{:itemscope => "", :itemtype =>"http://schema.org/Person"}
           .span6
-            %p 07811197374
-            %p= link_to "ben@bobop.co.uk", "mailto:ben@bobop.co.uk"
-            %address
+            %p{:itemprop => "telephone"} 07811197374
+            %p{:itemprop => "email"}= link_to "ben@bobop.co.uk", "mailto:ben@bobop.co.uk"
+            %address{:itemprop => "address", :itemscope => "", :itemtype =>"http://schema.org/PostalAddress"}
               %strong Bobop
               %br
-              Unit 17, Enterprise House
+              %span{:itemprop => "streetAddress"}
+                Unit 17, Enterprise House
+                %br
+                Manchester Science Park
+                %br
+                Lloyd Street North
               %br
-              Manchester Science Park
+              %span{:itemprop => "addressLocality"}Manchester
               %br
-              Lloyd Street North
-              %br
-              M15 6SE
+              %span{:itemprop => "postalCode"}M15 6SE
           .span6
             %p= link_to "Twitter", "http://twitter.com/bobop"
             %p= link_to "Github", "http://github.com/bobop"
