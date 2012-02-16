@@ -4,14 +4,14 @@
     Bobop - Freelance Ruby on Rails developer based in Manchester
 
 .row
-  .span16.content
+  .span12.content
     .row
-      .span10
+      .span8
         
         %h1= @client.name
         %h2= link_to @client.website, @client.website
         %p=raw @client.description
-      .span6
+      .span4
         .show_logo
           = image_tag @client.logo.url(:medium)
         .list_box
