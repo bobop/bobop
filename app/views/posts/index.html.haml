@@ -2,12 +2,12 @@
   %title Blog - Bobop - Freelance Ruby on Rails developer based in Manchester
 
 .row
-  .span16.content
+  .span12.content
     %h1 Blog
     %p= link_to 'New Post', new_post_path if current_user
     - @posts.each do |post|
       .row
-        .span16.content
+        .span12.content
           %h2
             = post.title
             %small= post.date

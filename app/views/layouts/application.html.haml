@@ -10,15 +10,16 @@
   %body
     .container
       .row
-        .span8.bobop_logo
+        .span4.bobop_logo
           = link_to image_tag("bobop_logo.jpg"), root_path
-        .span8
-          .row
-            = link_to "Home", root_path, :class => "span2 link"
-            = link_to "Services", services_path, :class => "span2 link"
-            = link_to "Blog", posts_path, :class => "span2 link"
-            = link_to "Contact", contact_path, :class => "span2 link"
-            = link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout" if current_user
+        .span6.offset2
+          %ul.nav.nav-pills.right
+            %li= link_to "Home", root_path, :class => "span1 link"
+            %li= link_to "Services", services_path, :class => "span1 link"
+            %li= link_to "Blog", posts_path, :class => "span1 link"
+            %li= link_to "Contact", contact_path, :class => "span1 link"
+            - if current_user
+              %li= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout"
       - if notice
         .row
           .span16
@@ -26,7 +27,7 @@
               %p#notice= notice
       - if alert
         .row
-          .span16
+          .span12
             .alert-message.error
               %p#alert= alert
       = yield

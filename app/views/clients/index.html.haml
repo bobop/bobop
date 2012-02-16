@@ -2,14 +2,14 @@
   %title Clients - Bobop - Freelance Ruby on Rails developer based in Manchester
 
 .row
-  .span16.content
+  .span12.content
     %h1 Clients
     %p My clients have ranged from VC funded music industry startups to Insurance Premium Tax companies. Unfortunately I'm not able to list some of these clients because I worked for them through other agencies. Do contact me if you want to know about them.
     %p Here are some of my latest clients:
     %p= link_to 'New Client', new_client_path if current_user
     - @clients.each do |client|
       .row
-        .span16.content
+        .span12.content
           .f_right
             = image_tag client.logo.url(:medium)
           %h2= client.name

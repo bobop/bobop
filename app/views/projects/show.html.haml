@@ -4,9 +4,9 @@
     Bobop - Freelance Ruby on Rails developer based in Manchester
 
 .row
-  .span16.content
+  .span12.content
     .row
-      .span10
+      .span9
         
         
         %h1
@@ -16,5 +16,5 @@
         %h2= link_to @project.website, @project.website
         = image_tag @project.screenshot.url(:medium), :class => "screenshot"
         %p=raw @project.description
-      .span6.show_logo
+      .span3.show_logo
         = image_tag @project.logo.url(:medium)

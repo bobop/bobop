@@ -2,14 +2,14 @@
   %title Projects - Bobop - Freelance Ruby on Rails developer based in Manchester
 
 .row
-  .span16.content
+  .span12.content
     %h1 Projects
     %p I have worked on many varied Ruby on Rails projects over the last 5 years.
     %p Here are some of my latest projects:
     %p= link_to 'New Project', new_project_path if current_user
     - @projects.each do |project|
       .row
-        .span16.content
+        .span12.content
           .f_right
             = image_tag project.logo.url(:medium)
           %h2

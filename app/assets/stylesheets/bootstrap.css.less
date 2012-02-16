@@ -1,0 +1,17 @@
+@import "twitter/bootstrap";
+
+// import responsive layout
+@import "twitter/bootstrap/responsive";
+
+// Your custom stylesheets goes here (override Less here)
+
+// Landscape phone to portrait tablet
+@media (max-width: 768px) {
+  .row > [class*="span"] {
+    margin-bottom: 10px;
+  }
+  .social {
+    display: inline;
+    padding-left: 20px;
+  }
+}

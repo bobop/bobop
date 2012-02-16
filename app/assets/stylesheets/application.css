@@ -1,5 +1,5 @@
 /*
- *= require twitter/bootstrap
+*= require twitter/bootstrap
 */
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
@@ -8,6 +8,9 @@
  *= require_self
  *= require_tree . 
 */
+.nav-pills {
+	margin-top: 20px;
+}
 
 a {
 	color: #205379;
@@ -15,10 +18,7 @@ a {
 
 a.link {
 	background: #9FDAD4;
-	margin-top: 10px;
 	text-align: center;
-	margin-top: 20px;
-	padding: 10px 0;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -65,7 +65,6 @@ a.link:hover {
 	text-align: left;
 }
 .twipsy.right {
-	margin-top: -5px;
 }
 
 .list_box {
@@ -81,15 +80,12 @@ a.link:hover {
 .list_content {
 	padding: 10px 20px;
 }
-.span6 .list_content {
-	width: 300px;
-}
-.span4 .list_content {
-	width: 180px;
+.list_content {
+	padding: 10px 20px;
 }
 .item {
 	float: left;
-	width: 300px;
+	width: 100%;
 	min-height: 50px;
 	margin-bottom: 10px;
 	padding-bottom: 10px;
@@ -169,6 +165,9 @@ a.link:hover {
 }
 .image_container #images {
 	width: 2000px;
+}
+.right {
+	float: right;
 }
 
 footer {
