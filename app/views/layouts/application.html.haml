@@ -14,10 +14,10 @@
           = link_to image_tag("bobop_logo.jpg"), root_path
         .span6.offset2
           %ul.nav.nav-pills.right
-            %li= link_to "Home", root_path, :class => "span1 link"
-            %li= link_to "Services", services_path, :class => "span1 link"
-            %li= link_to "Blog", posts_path, :class => "span1 link"
-            %li= link_to "Contact", contact_path, :class => "span1 link"
+            %li= link_to "Home", root_path, :class => "link"
+            %li= link_to "Services", services_path, :class => "link"
+            %li= link_to "Blog", posts_path, :class => "link"
+            %li= link_to "Contact", contact_path, :class => "link"
             - if current_user
               %li= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "btn logout"
       - if notice

@@ -11,6 +11,9 @@
 .nav-pills {
 	margin-top: 20px;
 }
+.nav-pills li {
+	margin-left: 20px;
+}
 
 a {
 	color: #205379;
@@ -26,7 +29,7 @@ a.link {
 	-moz-box-shadow: 3px 3px 5px #efefef;
 	-webkit-box-shadow: 3px 3px 5px #efefef;
 	color: #fff;
-	font-size: 16px;
+	font-size: 18px;
 	text-decoration: none;
 }
 a.link:hover {
