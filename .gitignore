@@ -7,3 +7,4 @@ tmp/
 public/system
 public/sitemap*
 config/s3.yml
+.powrc
